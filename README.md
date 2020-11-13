@@ -1,0 +1,2 @@
+# college-java
+compareNthSum metodu 
