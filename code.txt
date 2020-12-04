@@ -1,0 +1,64 @@
+import java.util.Scanner; 
+public class ArrayComparison { 
+public static int compareNthSum(int arr1[], int arr2[]) { 
+int size = arr1.length; 
+int size2 = arr2.length; 
+int sum1 = 0; 
+int sum2 = 0; 
+int n = 1; 
+int max = 0; 
+if (size < size2) { 
+for (int i = 0; i < size; i++) { 
+sum2 += arr2[i]; 
+ 
+if (sum1 == sum2) { 
+max = n ; 
+} 
+n++; 
+} 
+if (max != 0) { 
+return max; 
+} else 
+return -1; 
+ }else  {  
+for (int i = 0; i < size2; i++) {   
+sum1 += arr1[i]; 
+sum2 += arr2[i]; 
+ 
+if (sum1 == sum2) {   
+max = n; 
+} 
+n++; 
+İlk başta Scanner nesnesi oluşturmak için bir paketin  import deilmesi gerekli. 
+ 
+Ve bir class oluşturuyoruz 
+Dönüş tipi :  int 
+ 
+Veri tipleri : int size / size2 Dizinin boutunu kaydetmek için. 
+ 
+İnt sum1/sum2 toplama için  dizi içinde yapıyoruz.   İnt n =1 bu veride N elemanı kaydetecek.    İnt max maximum değeri kaydetmek için. 
+eğer (max sıfıra eşit değilse)  {Max değeri dönüş yap}  Aksi takdirde "else"  Eksi bir "-1" dönüş vap 
+
+ 
+} 
+if (max != 0) {   
+return max; 
+}  else 
+return -1; 
+} 
+} 
+ 
+public static void main(String args[]) {   
+; {  6   , 5 ,4    ,3   , 4  ,3 }  int arr1 []  =  / / 
+; {  1   , 8 ,6    ,1   , 5  ,2 }  int arr2 []  =  / / 
+;  { 5 ,4  ,3   , 2 ,1 }  int arr1 []  =  / / 
+;  { 8 ,7  ,1   , 1 ,4 }  int arr2 []  =  / / 
+;  { 3 ,2  , 1  } int arr1 []  =   
+;  { 8 ,10    , 7 } int arr1 []  =   
+System.out.println(compareNthSum( arr1 , arr2)); 
+//System.out.println("{3,4,3,4,5,6} ve {2,5,1,6,8,1} dizilerinin ilk " + compareNthSum(arr1, arr2) + " terim toplamı eşittir."); 
+System.out.println("{1,2,3} ve {7,10,8} dizilerinin ilk n terim toplamı eşit değildir."); 
+ 
+ 
+} 
+} 
